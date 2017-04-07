@@ -120,7 +120,7 @@ if [ ! -d $DIRF.static ]
 	then
 		echo $"Would you like to create a directory for read-only files to be laid"
 		echo -n $"over the original directory at $DIRF.static? [Y/n]: "
-		read STATYES
+		STATYES="Y"
 		echo ""
 fi
 if [ -d $DIRF.static ];
@@ -203,7 +203,7 @@ if [ ! -d "/home/$OPTARG.static" -a "$STATNO" = "Y" ];
 	then
 		echo "Would you like to create a directory for read-only files to be laid"
 		echo -n $"over the original user directory at /home/$OPTARG.static? [Y/n]: "
-		read STATIC
+		STATIC="Y"
 		echo ""
 fi
 if [ "$STATIC" = "Y" -o "$STATIC" = "y" ];
